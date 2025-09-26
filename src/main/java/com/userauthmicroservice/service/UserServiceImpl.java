@@ -7,12 +7,18 @@ import com.userauthmicroservice.exception.CustomException;
 import com.userauthmicroservice.model.User;
 import com.userauthmicroservice.repository.UserRepository;
 import com.userauthmicroservice.util.PasswordUtil;
+
+import java.util.Collections;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl implements UserService , UserDetailsService{
 
     private final UserRepository userRepository;
     private final PasswordUtil passwordUtil;
@@ -46,4 +52,17 @@ public class UserServiceImpl implements UserService {
         log.info("User logged in: {}", request.getUsername());
         return new UserResponse("Login successful");
     }
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = userRepository.findByUsername(username)
+            .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+
+        return new org.springframework.security.core.userdetails.User(
+            user.getUsername(),
+            user.getPassword(),  // Password is already encoded
+            Collections.emptyList()  // Add authorities/roles here if you have them
+        );
+    }
+    
+    
 }
