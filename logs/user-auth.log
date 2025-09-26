@@ -1,0 +1,326 @@
+2025-09-26T16:53:59.764+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:53:59.774+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:53:59.864+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-26T16:53:59.865+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-26T16:54:01.190+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:54:01.303+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2025-09-26T16:54:02.331+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:54:02.358+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:54:02.359+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:54:02.441+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:54:02.442+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2574 ms
+2025-09-26T16:54:02.740+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:54:02.865+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-26T16:54:02.938+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:54:03.513+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:54:03.576+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-26T16:54:03.884+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e981c49
+2025-09-26T16:54:03.888+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-26T16:54:03.974+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:54:03.977+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:54:04.013+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:54:05.331+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:54:05.427+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:54:05.982+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:54:06.629+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 07f88907-10b4-4ba7-9489-2834e91cac32
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:54:06.644+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:54:06.919+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:54:06.982+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:54:06.995+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 7.976 seconds (process running for 9.378)
+2025-09-26T16:57:45.048+05:30  INFO 18124 --- [user-auth-microservice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-26T16:57:45.054+05:30  INFO 18124 --- [user-auth-microservice] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-26T16:57:45.065+05:30  INFO 18124 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-26T16:57:45.073+05:30  INFO 18124 --- [user-auth-microservice] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:57:45.080+05:30  INFO 18124 --- [user-auth-microservice] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-26T16:57:45.094+05:30  INFO 18124 --- [user-auth-microservice] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-26T16:57:45.226+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:57:45.227+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:57:45.662+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:57:45.680+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-09-26T16:57:45.894+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:57:45.900+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:57:45.901+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:57:45.934+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:57:45.935+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 704 ms
+2025-09-26T16:57:46.001+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:57:46.006+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:57:46.025+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:57:46.028+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-09-26T16:57:46.041+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e208a4e
+2025-09-26T16:57:46.041+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-09-26T16:57:46.042+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:57:46.043+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:57:46.044+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:57:46.095+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:57:46.111+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:57:46.232+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:57:46.467+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 0736c3a0-cd43-4cb3-a8c5-8f6c3684913e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:57:46.469+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:57:46.540+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:57:46.560+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:57:46.565+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 1.393 seconds (process running for 228.948)
+2025-09-26T16:57:46.568+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-26T16:57:47.994+05:30  INFO 18124 --- [user-auth-microservice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-09-26T16:57:47.997+05:30  INFO 18124 --- [user-auth-microservice] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-26T16:57:48.015+05:30  INFO 18124 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-26T16:57:48.020+05:30  INFO 18124 --- [user-auth-microservice] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:57:48.022+05:30  INFO 18124 --- [user-auth-microservice] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-09-26T16:57:48.028+05:30  INFO 18124 --- [user-auth-microservice] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-09-26T16:57:48.160+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:57:48.161+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:57:48.515+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:57:48.539+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interface.
+2025-09-26T16:57:48.790+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:57:48.792+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:57:48.793+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:57:48.834+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:57:48.835+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 669 ms
+2025-09-26T16:57:48.920+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:57:48.925+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:57:48.943+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:57:48.944+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-09-26T16:57:48.958+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a9bbbaf
+2025-09-26T16:57:48.959+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-09-26T16:57:48.960+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:57:48.960+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:57:48.960+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:57:49.011+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:57:49.027+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:57:49.148+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:57:49.302+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 841bbe4e-1e00-4131-8bb0-f1899a2206a1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:57:49.303+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:57:49.350+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:57:49.367+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:57:49.372+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 1.259 seconds (process running for 231.754)
+2025-09-26T16:57:49.374+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-26T16:58:33.346+05:30  INFO 18124 --- [user-auth-microservice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-26T16:58:33.349+05:30  INFO 18124 --- [user-auth-microservice] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-26T16:58:33.355+05:30  INFO 18124 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-26T16:58:33.358+05:30  INFO 18124 --- [user-auth-microservice] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:33.359+05:30  INFO 18124 --- [user-auth-microservice] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-09-26T16:58:33.368+05:30  INFO 18124 --- [user-auth-microservice] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-09-26T16:58:33.520+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:58:33.520+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:58:33.896+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:58:33.912+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
+2025-09-26T16:58:34.098+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:58:34.101+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:58:34.101+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:58:34.121+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:58:34.122+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 600 ms
+2025-09-26T16:58:34.174+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:58:34.178+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:58:34.191+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:58:34.193+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-09-26T16:58:34.203+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bb12e13
+2025-09-26T16:58:34.204+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-09-26T16:58:34.205+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:58:34.205+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:58:34.206+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:58:34.250+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:58:34.265+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:34.365+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:58:34.523+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 84edd733-f1d0-46e9-8061-b70fc671eb9b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:58:34.524+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:58:34.598+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:58:34.618+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:58:34.623+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 1.198 seconds (process running for 277.006)
+2025-09-26T16:58:34.626+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-26T16:58:37.019+05:30  INFO 18124 --- [user-auth-microservice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-09-26T16:58:37.021+05:30  INFO 18124 --- [user-auth-microservice] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-26T16:58:37.027+05:30  INFO 18124 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-26T16:58:37.030+05:30  INFO 18124 --- [user-auth-microservice] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:37.038+05:30  INFO 18124 --- [user-auth-microservice] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-09-26T16:58:37.044+05:30  INFO 18124 --- [user-auth-microservice] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-09-26T16:58:37.127+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:58:37.128+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:58:37.394+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:58:37.408+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interface.
+2025-09-26T16:58:37.566+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:58:37.568+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:58:37.568+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:58:37.587+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:58:37.587+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 457 ms
+2025-09-26T16:58:37.634+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:58:37.637+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:58:37.652+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:58:37.653+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-09-26T16:58:37.660+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31f87e06
+2025-09-26T16:58:37.660+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-09-26T16:58:37.661+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:58:37.661+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:58:37.661+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:58:37.696+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:58:37.710+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:37.777+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:58:37.917+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a362bfa0-b2c0-45d3-a7c1-99230fb1bcc5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:58:37.918+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:58:37.955+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:58:37.975+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:58:37.980+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 0.888 seconds (process running for 280.363)
+2025-09-26T16:58:37.984+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-26T16:58:40.383+05:30  INFO 18124 --- [user-auth-microservice] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-09-26T16:58:40.385+05:30  INFO 18124 --- [user-auth-microservice] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-26T16:58:40.394+05:30  INFO 18124 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-26T16:58:40.398+05:30  INFO 18124 --- [user-auth-microservice] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:40.399+05:30  INFO 18124 --- [user-auth-microservice] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-09-26T16:58:40.412+05:30  INFO 18124 --- [user-auth-microservice] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-09-26T16:58:40.539+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 18124 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:58:40.540+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:58:40.909+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:58:40.928+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2025-09-26T16:58:41.146+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:58:41.148+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:58:41.149+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:58:41.190+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:58:41.191+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 645 ms
+2025-09-26T16:58:41.287+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:58:41.294+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:58:41.319+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:58:41.321+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-09-26T16:58:41.330+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c968f26
+2025-09-26T16:58:41.331+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-09-26T16:58:41.332+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:58:41.332+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:58:41.333+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:58:41.377+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:58:41.396+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:41.484+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:58:41.651+05:30  WARN 18124 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 7e4ad80e-91db-412e-8c7e-f9039c211649
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:58:41.653+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:58:41.701+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-26T16:58:41.725+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-26T16:58:41.731+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 1.242 seconds (process running for 284.113)
+2025-09-26T16:58:41.733+05:30  INFO 18124 --- [user-auth-microservice] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-26T16:58:53.491+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 1912 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-09-26T16:58:53.495+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-09-26T16:58:53.572+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-26T16:58:53.572+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-26T16:58:54.668+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-26T16:58:54.769+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2025-09-26T16:58:55.697+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-26T16:58:55.720+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-26T16:58:55.721+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-26T16:58:55.809+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-26T16:58:55.810+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2237 ms
+2025-09-26T16:58:56.089+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-26T16:58:56.226+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-26T16:58:56.289+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-26T16:58:56.839+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-26T16:58:56.899+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-26T16:58:57.215+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a42b880
+2025-09-26T16:58:57.220+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-26T16:58:57.321+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-26T16:58:57.323+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-26T16:58:57.366+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-26T16:58:58.676+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-26T16:58:58.766+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:58:59.296+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-26T16:58:59.832+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f972c847-0167-4038-b4a4-913c0c1d0b37
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-09-26T16:58:59.847+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-09-26T16:59:00.086+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-09-26T16:59:00.127+05:30  WARN 1912 --- [user-auth-microservice] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-09-26T16:59:00.131+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-26T16:59:00.135+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-26T16:59:00.146+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-09-26T16:59:00.168+05:30  INFO 1912 --- [user-auth-microservice] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-09-26T16:59:00.206+05:30 ERROR 1912 --- [user-auth-microservice] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
