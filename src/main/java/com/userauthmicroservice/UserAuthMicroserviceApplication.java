@@ -1,4 +1,4 @@
-package com.example.auth_microservice;
+package com.userauthmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class UserAuthMicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UserAuthMicroserviceApplication.class, args);
+		SpringApplication.run(UserAuthMicroserviceApplication.
+				class, args);
 	}
 
 }
