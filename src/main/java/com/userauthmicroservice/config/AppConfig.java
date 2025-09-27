@@ -7,7 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 import com.userauthmicroservice.service.UserServiceImpl;
-
+ 
 @Configuration
 public class AppConfig {
 
@@ -16,6 +16,7 @@ public class AppConfig {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+    
  // Security filter chain bean to configure HTTP security
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
