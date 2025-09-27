@@ -1,7 +1,10 @@
 package com.userauthmicroservice.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.userauthmicroservice.dto.LoginRequest;
+import com.userauthmicroservice.dto.LogoutRequest;
 import com.userauthmicroservice.dto.RegisterRequest;
+import com.userauthmicroservice.dto.ResetPasswordRequest;
+import com.userauthmicroservice.dto.UserResponse;
 import com.userauthmicroservice.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -52,4 +55,32 @@ public class UserControllerTest {
                 .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk());
     }
+    @Test
+    public void testLogout() throws Exception {
+        LogoutRequest request = new LogoutRequest();
+        request.setUsername("testuser");
+
+        Mockito.when(userService.logoutUser(Mockito.any())).thenReturn(new UserResponse("Logout successful"));
+
+        mockMvc.perform(post("/api/logout")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void testResetPassword() throws Exception {
+        ResetPasswordRequest request = new ResetPasswordRequest();
+        request.setUsername("testuser");
+        request.setOldPassword("oldpass");
+        request.setNewPassword("newpass");
+
+        Mockito.when(userService.resetPassword(Mockito.any())).thenReturn(new UserResponse("Password reset successful"));
+
+        mockMvc.perform(post("/api/reset")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isOk());
+    }
+
 }

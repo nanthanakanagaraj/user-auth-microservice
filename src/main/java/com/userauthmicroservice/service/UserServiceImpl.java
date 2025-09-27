@@ -1,7 +1,9 @@
 package com.userauthmicroservice.service;
 
 import com.userauthmicroservice.dto.LoginRequest;
+import com.userauthmicroservice.dto.LogoutRequest;
 import com.userauthmicroservice.dto.RegisterRequest;
+import com.userauthmicroservice.dto.ResetPasswordRequest;
 import com.userauthmicroservice.dto.UserResponse;
 import com.userauthmicroservice.exception.CustomException;
 import com.userauthmicroservice.model.User;
@@ -63,6 +65,30 @@ public class UserServiceImpl implements UserService , UserDetailsService{
             Collections.emptyList()  // Add authorities/roles here if you have them
         );
     }
+    @Override
+    public UserResponse logoutUser(LogoutRequest request) {
+        log.info("User {} logged out", request.getUsername());
+        // HTTP Basic Auth is stateless; just return success message
+        return new UserResponse("Logout successful");
+    }
+
+    @Override
+    public UserResponse resetPassword(ResetPasswordRequest request) {
+        User user = userRepository.findByUsername(request.getUsername())
+            .orElseThrow(() -> new CustomException("User not found"));
+
+        if (!passwordUtil.matches(request.getOldPassword(), user.getPassword())) {
+            throw new CustomException("Old password is incorrect");
+        }
+
+        user.setPassword(passwordUtil.hashPassword(request.getNewPassword()));
+        userRepository.save(user);
+
+        log.info("User {} password reset successful", request.getUsername());
+
+        return new UserResponse("Password reset successful");
+    }
+
     
     
 }

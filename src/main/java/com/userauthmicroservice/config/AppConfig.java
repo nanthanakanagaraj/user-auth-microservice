@@ -22,7 +22,7 @@ public class AppConfig {
         http
             .csrf(csrf -> csrf.disable())  // Disable CSRF for easier testing, enable in production appropriately
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/register").permitAll()  // Allow register endpoint without auth
+                .requestMatchers("/api/register","/api/login", "/api/logout", "/api/reset" ).permitAll()  // Allow register endpoint without auth
                 .anyRequest().authenticated()                 // All other endpoints require authentication
             )
             .httpBasic();  // Use HTTP Basic auth (can be changed to JWT etc. depending on your setup)
@@ -33,6 +33,7 @@ public class AppConfig {
     public UserDetailsService userDetailsService(UserServiceImpl userServiceImpl) {
         return userServiceImpl;
     }
+    
 
 
     
