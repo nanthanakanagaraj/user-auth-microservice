@@ -18,6 +18,7 @@
     <name>user-auth-microservice</name>
     <description>User authentication microservice</description>
 
+
     <properties>
         <java.version>21</java.version>
     </properties>
