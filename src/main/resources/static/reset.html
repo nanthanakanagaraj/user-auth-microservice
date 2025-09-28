@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reset Password</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding-top: 50px;
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #4a76a8;
+            font-weight: 700;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 14px;
+            margin-bottom: 15px;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #4a76a8;
+            outline: none;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            background-color: #4a76a8;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background-color: #384f7e;
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+            background-color: #2b3b5b;
+        }
+        #result {
+            margin-top: 18px;
+            font-weight: 600;
+            text-align: center;
+            min-height: 20px;
+        }
+        #result.success {
+            color: #28a745;
+        }
+        #result.error {
+            color: #dc3545;
+        }
+        @media (max-width: 450px) {
+            .container {
+                margin: 16px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Reset Password</h2>
+    <input id="username" type="text" placeholder="Username" aria-label="Username" />
+    <input id="oldPassword" type="password" placeholder="Old Password" aria-label="Old Password" />
+    <input id="newPassword" type="password" placeholder="New Password" aria-label="New Password" />
+    <button onclick="resetPassword()">Reset Password</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    async function resetPassword() {
+        const usernameInput = document.getElementById('username');
+        const oldPassInput = document.getElementById('oldPassword');
+        const newPassInput = document.getElementById('newPassword');
+        const result = document.getElementById('result');
+
+        const username = usernameInput.value.trim();
+        const oldPassword = oldPassInput.value.trim();
+        const newPassword = newPassInput.value.trim();
+
+        if (!username) {
+            result.textContent = "Please enter your username.";
+            result.className = "error";
+            usernameInput.focus();
+            return;
+        }
+        if (!oldPassword) {
+            result.textContent = "Please enter your old password.";
+            result.className = "error";
+            oldPassInput.focus();
+            return;
+        }
+        if (!newPassword) {
+            result.textContent = "Please enter your new password.";
+            result.className = "error";
+            newPassInput.focus();
+            return;
+        }
+        if (newPassword.length < 6) {
+            result.textContent = "New password must be at least 6 characters.";
+            result.className = "error";
+            newPassInput.focus();
+            return;
+        }
+
+        result.textContent = "Resetting password...";
+        result.className = "";
+
+        try {
+            const response = await fetch('/api/reset', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({username, oldPassword, newPassword})
+            });
+
+            if (!response.ok) {
+                throw new Error(`Server responded with ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            if (data.message) {
+                result.textContent = data.message;
+                result.className = "success";
+                usernameInput.value = "";
+                oldPassInput.value = "";
+                newPassInput.value = "";
+            } else {
+                result.textContent = "Password reset successfully.";
+                result.className = "success";
+            }
+        } catch (error) {
+            result.textContent = `Error: ${error.message}`;
+            result.className = "error";
+        }
+    }
+</script>
+</body>
+</html>

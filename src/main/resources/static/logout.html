@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Logout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      max-width: 350px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 1px 1px 5px #ccc;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a76a8;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #336699;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Logout</h2>
+    <input id="username" placeholder="Username" />
+    <button onclick="logout()">Logout</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    async function logout() {
+      const usernameInput = document.getElementById('username');
+      const username = usernameInput.value.trim();
+      const result = document.getElementById('result');
+
+      if (!username) {
+        result.textContent = "Please enter your username.";
+        return;
+      }
+
+      result.textContent = "Logging out...";
+
+      try {
+        const response = await fetch('/api/logout', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({username})
+        });
+
+        if (!response.ok) {
+          throw new Error("Server responded with status " + response.status);
+        }
+
+        const data = await response.json();
+        result.textContent = data.message || "Logout successful!";
+        usernameInput.value = "";
+      } catch (error) {
+        result.textContent = "Error: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
