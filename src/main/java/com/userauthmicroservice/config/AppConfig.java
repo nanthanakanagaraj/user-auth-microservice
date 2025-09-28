@@ -3,6 +3,7 @@ package com.userauthmicroservice.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -17,6 +18,8 @@ public class AppConfig {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+    
+    
 
     // Security filter chain bean to configure HTTP security
     @Bean
@@ -25,7 +28,8 @@ public class AppConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                     "/api/register", "/api/login", "/api/logout", "/api/reset", 
-                    "/register.html", "/login.html", "/logout.html", "/reset.html")
+                    "/register.html", "/login.html", "/logout.html", "/reset.html",
+                    "/dashboard.html")
                 .permitAll()  // Allow these endpoints without authentication
                 .anyRequest().authenticated()  // All other endpoints require authentication
             )
