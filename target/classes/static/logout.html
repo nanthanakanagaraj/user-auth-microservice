@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Logout</title>
   <style>
     body {
+      background: #e3f0fd;
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
+      margin: 0;
     }
-    .container {
+    .main {
       background: white;
-      max-width: 350px;
-      margin: 40px auto;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 1px 1px 5px #ccc;
+      max-width: 330px;
+      margin: 70px auto;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px #b2c2c9;
+      padding: 30px 18px;
       text-align: center;
     }
     h2 {
-      color: #333;
-      margin-bottom: 20px;
+      color: #3075c7;
+      margin-bottom: 25px;
     }
     input {
-      width: 100%;
+      width: 93%;
       padding: 10px;
-      margin-bottom: 15px;
       border-radius: 5px;
-      border: 1px solid #aaa;
+      border: 1px solid #b2c2c9;
       font-size: 16px;
+      margin-bottom: 18px;
     }
     button {
       width: 100%;
-      padding: 12px;
-      background-color: #4a76a8;
+      background: #3075c7;
       color: white;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
+      padding: 11px;
       font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+      margin-bottom: 18px;
     }
     button:hover {
-      background-color: #336699;
+      background: #285a9a;
     }
-    #result {
-      margin-top: 20px;
+    #output {
+      min-height: 24px;
       font-weight: bold;
+      color: #e85325;
+      transition: color 0.2s;
+    }
+    #output.success {
+      color: #2b985c;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="main">
     <h2>Logout</h2>
-    <input id="username" placeholder="Username" />
+    <!-- Username input: -->
+    <input id="username" placeholder="Enter your username">
+    <!-- Click the button to logout: -->
     <button onclick="logout()">Logout</button>
-    <p id="result"></p>
+    <!-- Feedback shown here -->
+    <div id="output"></div>
   </div>
-
   <script>
-    async function logout() {
-      const usernameInput = document.getElementById('username');
-      const username = usernameInput.value.trim();
-      const result = document.getElementById('result');
+    // This function runs when "Logout" button is clicked
+    function logout() {
+      // Get the username from the input box
+      var username = document.getElementById('username').value.trim();
+      var output = document.getElementById('output');
 
-      if (!username) {
-        result.textContent = "Please enter your username.";
+      // Simple check for empty input
+      if (username === "") {
+        output.textContent = "Please enter your username.";
+        output.className = ""; // Normal color
         return;
       }
+      output.textContent = "Please wait... Logging out.";
+      output.className = "";
 
-      result.textContent = "Logging out...";
-
-      try {
-        const response = await fetch('/api/logout', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({username})
-        });
-
-        if (!response.ok) {
-          throw new Error("Server responded with status " + response.status);
-        }
-
-        const data = await response.json();
-        result.textContent = data.message || "Logout successful!";
-        usernameInput.value = "";
-      } catch (error) {
-        result.textContent = "Error: " + error.message;
-      }
+      // Make a HTTP POST request to /api/logout
+      fetch('/api/logout', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({username: username})
+      })
+      .then(function(response) {
+        // Check for HTTP error
+        if (!response.ok) throw new Error("Server error");
+        return response.json();
+      })
+      .then(function(data) {
+        // Show server response (success message)
+        output.textContent = data.message || "Logout successful!";
+        output.className = "success";
+        document.getElementById('username').value = ""; // Clear box
+      })
+      .catch(function(error) {
+        // Show error
+        output.textContent = "Logout failed: " + error.message;
+        output.className = "";
+      });
     }
   </script>
 </body>
