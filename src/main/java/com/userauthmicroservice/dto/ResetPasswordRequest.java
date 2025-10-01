@@ -1,7 +1,5 @@
 package com.userauthmicroservice.dto;
 
-
-
 public class ResetPasswordRequest {
     private String username;
     private String oldPassword;
