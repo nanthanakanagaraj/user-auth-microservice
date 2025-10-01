@@ -8360,3 +8360,326 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 2025-09-29T23:12:05.871+05:30  INFO 9628 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-09-29T23:12:05.885+05:30  INFO 9628 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 6.655 seconds (process running for 8.027)
 >>>>>>> f112c1e5750ec40cce21961776ef35e6a09d906c
+2025-10-01T10:47:54.946+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Starting UserAuthMicroserviceApplication using Java 21.0.7 with PID 2296 (C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice\target\classes started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T10:47:54.949+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T10:47:55.031+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-01T10:47:55.031+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-01T10:47:56.343+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T10:47:56.450+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interface.
+2025-10-01T10:47:57.465+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-01T10:47:57.490+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-01T10:47:57.491+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-01T10:47:57.575+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-01T10:47:57.576+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2544 ms
+2025-10-01T10:47:57.907+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T10:47:58.033+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-01T10:47:58.103+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-01T10:47:58.696+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T10:47:58.765+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T10:47:59.119+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3701d40f
+2025-10-01T10:47:59.124+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T10:47:59.240+05:30  WARN 2296 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-01T10:47:59.243+05:30  WARN 2296 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-01T10:47:59.276+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-01T10:48:00.603+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T10:48:00.728+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T10:48:01.305+05:30  WARN 2296 --- [user-auth-microservice] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T10:48:01.361+05:30  WARN 2296 --- [user-auth-microservice] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-10-01T10:48:01.361+05:30 DEBUG 2296 --- [user-auth-microservice] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-01T10:48:01.808+05:30 DEBUG 2296 --- [user-auth-microservice] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T10:48:02.228+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-01T10:48:02.296+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-01T10:48:02.308+05:30  INFO 2296 --- [user-auth-microservice] [restartedMain] c.u.UserAuthMicroserviceApplication      : Started UserAuthMicroserviceApplication in 8.205 seconds (process running for 9.796)
+2025-10-01T11:16:16.945+05:30  WARN 2296 --- [user-auth-microservice] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m47s293ms173µs900ns).
+2025-10-01T12:38:25.674+05:30  WARN 2296 --- [user-auth-microservice] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m38s298ms485µs400ns).
+2025-10-01T12:57:48.977+05:30  INFO 2296 --- [user-auth-microservice] [RMI TCP Connection(72)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-01T12:57:49.016+05:30  INFO 2296 --- [user-auth-microservice] [RMI TCP Connection(72)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-01T12:57:49.031+05:30  INFO 2296 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-01T12:57:49.052+05:30  INFO 2296 --- [user-auth-microservice] [RMI TCP Connection(72)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T12:57:49.079+05:30  INFO 2296 --- [user-auth-microservice] [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T12:57:49.085+05:30  INFO 2296 --- [user-auth-microservice] [RMI TCP Connection(72)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T14:34:56.822+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Starting UserAuthMicroserviceApplicationTests using Java 21.0.7 with PID 20856 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T14:34:56.826+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T14:34:58.303+05:30  INFO 20856 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T14:34:58.402+05:30  INFO 20856 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2025-10-01T14:34:59.353+05:30  INFO 20856 --- [user-auth-microservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T14:34:59.476+05:30  INFO 20856 --- [user-auth-microservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-01T14:34:59.552+05:30  INFO 20856 --- [user-auth-microservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-01T14:35:00.149+05:30  INFO 20856 --- [user-auth-microservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T14:35:00.215+05:30  INFO 20856 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T14:35:00.552+05:30  INFO 20856 --- [user-auth-microservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6068ebb2
+2025-10-01T14:35:00.556+05:30  INFO 20856 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T14:35:00.649+05:30  WARN 20856 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-01T14:35:00.651+05:30  WARN 20856 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-01T14:35:00.683+05:30  INFO 20856 --- [user-auth-microservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-01T14:35:01.735+05:30  INFO 20856 --- [user-auth-microservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T14:35:01.831+05:30  INFO 20856 --- [user-auth-microservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T14:35:02.435+05:30  WARN 20856 --- [user-auth-microservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T14:35:02.527+05:30  WARN 20856 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-10-01T14:35:02.528+05:30 DEBUG 20856 --- [user-auth-microservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-01T14:35:03.111+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T14:35:03.734+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Started UserAuthMicroserviceApplicationTests in 7.758 seconds (process running for 10.42)
+2025-10-01T14:35:04.447+05:30  INFO 20856 --- [user-auth-microservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.userauthmicroservice.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-01T14:35:04.530+05:30  INFO 20856 --- [user-auth-microservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.userauthmicroservice.UserAuthMicroserviceApplication for test class com.userauthmicroservice.controller.UserControllerTest
+2025-10-01T14:35:04.537+05:30  INFO 20856 --- [user-auth-microservice] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-10-01T14:35:04.580+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Starting UserControllerTest using Java 21.0.7 with PID 20856 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T14:35:04.581+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T14:35:05.348+05:30  WARN 20856 --- [user-auth-microservice] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: a16c657c-81ab-436e-a315-481dbdbb2fdd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-01T14:35:05.373+05:30  INFO 20856 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-01T14:35:05.413+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T14:35:05.528+05:30  INFO 20856 --- [user-auth-microservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-01T14:35:05.529+05:30  INFO 20856 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-01T14:35:05.533+05:30  INFO 20856 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-10-01T14:35:05.563+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Started UserControllerTest in 1.027 seconds (process running for 12.25)
+2025-10-01T14:35:05.747+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/login
+2025-10-01T14:35:05.769+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/login
+2025-10-01T14:35:05.770+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T14:35:05.825+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/register
+2025-10-01T14:35:05.825+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/register
+2025-10-01T14:35:05.826+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T14:35:05.845+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/logout
+2025-10-01T14:35:05.846+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/logout
+2025-10-01T14:35:05.847+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T14:35:05.864+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/reset
+2025-10-01T14:35:05.865+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/reset
+2025-10-01T14:35:05.866+05:30 DEBUG 20856 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T14:35:06.276+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User registered: testuser
+2025-10-01T14:35:06.303+05:30  INFO 20856 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User logged in: testuser
+2025-10-01T14:35:06.328+05:30  INFO 20856 --- [user-auth-microservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T14:35:06.333+05:30  INFO 20856 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T14:35:06.358+05:30  INFO 20856 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T15:03:58.170+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Starting UserAuthMicroserviceApplicationTests using Java 21.0.7 with PID 17116 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:03:58.174+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:03:59.688+05:30  INFO 17116 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T15:03:59.812+05:30  INFO 17116 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2025-10-01T15:04:00.915+05:30  INFO 17116 --- [user-auth-microservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T15:04:01.081+05:30  INFO 17116 --- [user-auth-microservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-01T15:04:01.173+05:30  INFO 17116 --- [user-auth-microservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-01T15:04:01.936+05:30  INFO 17116 --- [user-auth-microservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T15:04:02.019+05:30  INFO 17116 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T15:04:02.390+05:30  INFO 17116 --- [user-auth-microservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bec1589
+2025-10-01T15:04:02.393+05:30  INFO 17116 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T15:04:02.480+05:30  WARN 17116 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-01T15:04:02.482+05:30  WARN 17116 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-01T15:04:02.517+05:30  INFO 17116 --- [user-auth-microservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-01T15:04:03.884+05:30  INFO 17116 --- [user-auth-microservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T15:04:03.983+05:30  INFO 17116 --- [user-auth-microservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:04:04.657+05:30  WARN 17116 --- [user-auth-microservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T15:04:04.751+05:30  WARN 17116 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-10-01T15:04:04.752+05:30 DEBUG 17116 --- [user-auth-microservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-01T15:04:05.351+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:04:05.974+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Started UserAuthMicroserviceApplicationTests in 8.646 seconds (process running for 10.995)
+2025-10-01T15:04:06.693+05:30  INFO 17116 --- [user-auth-microservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.userauthmicroservice.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-01T15:04:06.757+05:30  INFO 17116 --- [user-auth-microservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.userauthmicroservice.UserAuthMicroserviceApplication for test class com.userauthmicroservice.controller.UserControllerTest
+2025-10-01T15:04:06.767+05:30  INFO 17116 --- [user-auth-microservice] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-10-01T15:04:06.816+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Starting UserControllerTest using Java 21.0.7 with PID 17116 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:04:06.816+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:04:07.651+05:30  WARN 17116 --- [user-auth-microservice] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 851d710b-07cc-48d5-8b3c-fbd08b502d5a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-01T15:04:07.671+05:30  INFO 17116 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-01T15:04:07.712+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:04:07.839+05:30  INFO 17116 --- [user-auth-microservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-01T15:04:07.840+05:30  INFO 17116 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-01T15:04:07.845+05:30  INFO 17116 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-10-01T15:04:07.871+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Started UserControllerTest in 1.105 seconds (process running for 12.893)
+2025-10-01T15:04:08.040+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:04:08.041+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@19598b38]
+2025-10-01T15:04:08.094+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/login
+2025-10-01T15:04:08.113+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:04:08.114+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/login
+2025-10-01T15:04:08.232+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.controller.UserController            : Login API called
+2025-10-01T15:04:08.297+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:04:08.298+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@1e250539]
+2025-10-01T15:04:08.301+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/register
+2025-10-01T15:04:08.302+05:30 DEBUG 17116 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:04:08.303+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/register
+2025-10-01T15:04:08.309+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.controller.UserController            : Register API called
+2025-10-01T15:04:08.332+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/logout
+2025-10-01T15:04:08.336+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/logout
+2025-10-01T15:04:08.336+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T15:04:08.379+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/reset
+2025-10-01T15:04:08.380+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.security.web.csrf.CsrfFilter         : Invalid CSRF token found for http://localhost/api/reset
+2025-10-01T15:04:08.381+05:30 DEBUG 17116 --- [user-auth-microservice] [main] o.s.s.w.access.AccessDeniedHandlerImpl   : Responding with 403 status code
+2025-10-01T15:04:08.802+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User registered: testuser
+2025-10-01T15:04:08.833+05:30  INFO 17116 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User logged in: testuser
+2025-10-01T15:04:08.855+05:30  INFO 17116 --- [user-auth-microservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:04:08.863+05:30  INFO 17116 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T15:04:08.887+05:30  INFO 17116 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T15:11:11.940+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Starting UserAuthMicroserviceApplicationTests using Java 21.0.7 with PID 21348 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:11:11.942+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:11:13.317+05:30  INFO 21348 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T15:11:13.445+05:30  INFO 21348 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-10-01T15:11:14.555+05:30  INFO 21348 --- [user-auth-microservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T15:11:14.715+05:30  INFO 21348 --- [user-auth-microservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-01T15:11:14.818+05:30  INFO 21348 --- [user-auth-microservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-01T15:11:15.479+05:30  INFO 21348 --- [user-auth-microservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T15:11:15.555+05:30  INFO 21348 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T15:11:15.920+05:30  INFO 21348 --- [user-auth-microservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bec1589
+2025-10-01T15:11:15.924+05:30  INFO 21348 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T15:11:16.002+05:30  WARN 21348 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-01T15:11:16.005+05:30  WARN 21348 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-01T15:11:16.034+05:30  INFO 21348 --- [user-auth-microservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-01T15:11:17.225+05:30  INFO 21348 --- [user-auth-microservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T15:11:17.321+05:30  INFO 21348 --- [user-auth-microservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:11:17.957+05:30  WARN 21348 --- [user-auth-microservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T15:11:18.057+05:30  WARN 21348 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-10-01T15:11:18.058+05:30 DEBUG 21348 --- [user-auth-microservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-01T15:11:18.640+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:11:19.206+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Started UserAuthMicroserviceApplicationTests in 8.065 seconds (process running for 10.291)
+2025-10-01T15:11:19.805+05:30  INFO 21348 --- [user-auth-microservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.userauthmicroservice.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-01T15:11:19.860+05:30  INFO 21348 --- [user-auth-microservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.userauthmicroservice.UserAuthMicroserviceApplication for test class com.userauthmicroservice.controller.UserControllerTest
+2025-10-01T15:11:19.868+05:30  INFO 21348 --- [user-auth-microservice] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-10-01T15:11:19.910+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Starting UserControllerTest using Java 21.0.7 with PID 21348 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:11:19.910+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:11:20.706+05:30  WARN 21348 --- [user-auth-microservice] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: cdf53547-df0c-4ff9-b31e-4455d45a727f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-01T15:11:20.728+05:30  INFO 21348 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-01T15:11:20.764+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:11:20.868+05:30  INFO 21348 --- [user-auth-microservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-01T15:11:20.869+05:30  INFO 21348 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-01T15:11:20.872+05:30  INFO 21348 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2025-10-01T15:11:20.898+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Started UserControllerTest in 1.03 seconds (process running for 11.983)
+2025-10-01T15:11:21.069+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:11:21.071+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@233bfc46]
+2025-10-01T15:11:21.114+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/login
+2025-10-01T15:11:21.134+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:11:21.141+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/login
+2025-10-01T15:11:21.263+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserController            : Login API called
+2025-10-01T15:11:21.323+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:11:21.325+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3edc999f]
+2025-10-01T15:11:21.329+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/register
+2025-10-01T15:11:21.331+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:11:21.331+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/register
+2025-10-01T15:11:21.335+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserController            : Register API called
+2025-10-01T15:11:21.351+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:11:21.351+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3fd93330]
+2025-10-01T15:11:21.353+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/logout
+2025-10-01T15:11:21.354+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:11:21.355+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/logout
+2025-10-01T15:11:21.359+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserController            : Logout API called for user: testuser
+2025-10-01T15:11:21.385+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:11:21.386+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@7d90d4c6]
+2025-10-01T15:11:21.388+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/reset
+2025-10-01T15:11:21.390+05:30 DEBUG 21348 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:11:21.390+05:30 DEBUG 21348 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/reset
+2025-10-01T15:11:21.394+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.controller.UserController            : Reset Password API called for user: testuser
+2025-10-01T15:11:21.827+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User registered: testuser
+2025-10-01T15:11:21.861+05:30  INFO 21348 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User logged in: testuser
+2025-10-01T15:11:21.888+05:30  INFO 21348 --- [user-auth-microservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:11:21.894+05:30  INFO 21348 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T15:11:21.920+05:30  INFO 21348 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-01T15:22:09.920+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Starting UserAuthMicroserviceApplicationTests using Java 21.0.7 with PID 21844 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:22:09.924+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:22:11.256+05:30  INFO 21844 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-01T15:22:11.383+05:30  INFO 21844 --- [user-auth-microservice] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-10-01T15:22:12.472+05:30  INFO 21844 --- [user-auth-microservice] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-01T15:22:12.643+05:30  INFO 21844 --- [user-auth-microservice] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-01T15:22:12.744+05:30  INFO 21844 --- [user-auth-microservice] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-01T15:22:13.409+05:30  INFO 21844 --- [user-auth-microservice] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-01T15:22:13.491+05:30  INFO 21844 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-01T15:22:13.852+05:30  INFO 21844 --- [user-auth-microservice] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fa5cc73
+2025-10-01T15:22:13.855+05:30  INFO 21844 --- [user-auth-microservice] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-01T15:22:13.949+05:30  WARN 21844 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-01T15:22:13.951+05:30  WARN 21844 --- [user-auth-microservice] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-10-01T15:22:13.992+05:30  INFO 21844 --- [user-auth-microservice] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-01T15:22:15.211+05:30  INFO 21844 --- [user-auth-microservice] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-01T15:22:15.284+05:30  INFO 21844 --- [user-auth-microservice] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:22:15.873+05:30  WARN 21844 --- [user-auth-microservice] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-01T15:22:15.934+05:30  WARN 21844 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Found 2 UserDetailsService beans, with names [userServiceImpl, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2025-10-01T15:22:15.935+05:30 DEBUG 21844 --- [user-auth-microservice] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-10-01T15:22:16.482+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:22:17.065+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.UserAuthMicroserviceApplicationTests : Started UserAuthMicroserviceApplicationTests in 7.884 seconds (process running for 10.146)
+2025-10-01T15:22:17.785+05:30  INFO 21844 --- [user-auth-microservice] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.userauthmicroservice.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-01T15:22:17.849+05:30  INFO 21844 --- [user-auth-microservice] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.userauthmicroservice.UserAuthMicroserviceApplication for test class com.userauthmicroservice.controller.UserControllerTest
+2025-10-01T15:22:17.857+05:30  INFO 21844 --- [user-auth-microservice] [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2025-10-01T15:22:17.899+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Starting UserControllerTest using Java 21.0.7 with PID 21844 (started by New in C:\Users\New\Documents\workspace-spring-tools-for-eclipse-4.31.0.RELEASE\user-auth-microservice)
+2025-10-01T15:22:17.900+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : No active profile set, falling back to 1 default profile: "default"
+2025-10-01T15:22:18.733+05:30  WARN 21844 --- [user-auth-microservice] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4bbd3ee4-a269-488e-9274-ad4d3e286e58
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-01T15:22:18.753+05:30  INFO 21844 --- [user-auth-microservice] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-01T15:22:18.793+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-01T15:22:18.910+05:30  INFO 21844 --- [user-auth-microservice] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-10-01T15:22:18.910+05:30  INFO 21844 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-10-01T15:22:18.915+05:30  INFO 21844 --- [user-auth-microservice] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2025-10-01T15:22:18.940+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserControllerTest        : Started UserControllerTest in 1.083 seconds (process running for 12.02)
+2025-10-01T15:22:19.089+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:22:19.091+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@233bfc46]
+2025-10-01T15:22:19.143+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/login
+2025-10-01T15:22:19.159+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:22:19.161+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/login
+2025-10-01T15:22:19.274+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserController            : Login API called
+2025-10-01T15:22:19.336+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:22:19.337+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3edc999f]
+2025-10-01T15:22:19.339+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/register
+2025-10-01T15:22:19.341+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:22:19.342+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/register
+2025-10-01T15:22:19.346+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserController            : Register API called
+2025-10-01T15:22:19.365+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:22:19.366+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@3fd93330]
+2025-10-01T15:22:19.369+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/logout
+2025-10-01T15:22:19.371+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:22:19.372+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/logout
+2025-10-01T15:22:19.376+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserController            : Logout API called for user: testuser
+2025-10-01T15:22:19.408+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Created HttpSession as SecurityContext is non-default
+2025-10-01T15:22:19.409+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.springframework.mock.web.MockHttpSession@7d90d4c6]
+2025-10-01T15:22:19.411+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Securing POST /api/reset
+2025-10-01T15:22:19.413+05:30 DEBUG 21844 --- [user-auth-microservice] [main] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=user, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]
+2025-10-01T15:22:19.414+05:30 DEBUG 21844 --- [user-auth-microservice] [main] o.s.security.web.FilterChainProxy        : Secured POST /api/reset
+2025-10-01T15:22:19.419+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.controller.UserController            : Reset Password API called for user: testuser
+2025-10-01T15:22:19.892+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User registered: testuser
+2025-10-01T15:22:19.923+05:30  INFO 21844 --- [user-auth-microservice] [main] c.u.service.UserServiceImpl              : User logged in: testuser
+2025-10-01T15:22:19.948+05:30  INFO 21844 --- [user-auth-microservice] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-01T15:22:19.953+05:30  INFO 21844 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-01T15:22:19.972+05:30  INFO 21844 --- [user-auth-microservice] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
