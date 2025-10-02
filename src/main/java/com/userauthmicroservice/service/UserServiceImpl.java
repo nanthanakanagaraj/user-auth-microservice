@@ -20,75 +20,76 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService , UserDetailsService{
+public class UserServiceImpl implements UserService, UserDetailsService {
 
-    private final UserRepository userRepository;
-    private final PasswordUtil passwordUtil;
-    private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+	private final UserRepository userRepository;
+	private final PasswordUtil passwordUtil;
+	private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    public UserServiceImpl(UserRepository userRepository, PasswordUtil passwordUtil) {
-        this.userRepository = userRepository;
-        this.passwordUtil = passwordUtil;
-    }
+	public UserServiceImpl(UserRepository userRepository, PasswordUtil passwordUtil) {
+		this.userRepository = userRepository;
+		this.passwordUtil = passwordUtil;
+	}
 
-    @Override
-    public UserResponse registerUser(RegisterRequest request) {
-        if (userRepository.existsByUsername(request.getUsername())) {
-            throw new CustomException("Username already exists");
-        }
-        User user = new User();
-        user.setUsername(request.getUsername());
-        user.setPassword(passwordUtil.hashPassword(request.getPassword()));
-        userRepository.save(user);
-        log.info("User registered: {}", request.getUsername());
-        return new UserResponse("User registered successfully");
-    }
+	@Override
+	public UserResponse registerUser(RegisterRequest request) {
+		if (userRepository.existsByUsername(request.getUsername())) {
+			throw new CustomException("Username already exists");
+		}
+		User user = new User();
+		user.setUsername(request.getUsername());
+		user.setPassword(passwordUtil.hashPassword(request.getPassword()));
+		userRepository.save(user);
+		log.info("User registered: {}", request.getUsername());
+		return new UserResponse("User registered successfully");
+	}
 
-    @Override
-    public UserResponse loginUser(LoginRequest request) {
-        User user = userRepository.findByUsername(request.getUsername())
-                .orElseThrow(() -> new CustomException("Invalid username or password"));
-        if (!passwordUtil.matches(request.getPassword(), user.getPassword())) {
-            throw new CustomException("Invalid username or password");
-        }
-        log.info("User logged in: {}", request.getUsername());
-        return new UserResponse("Login successful");
-    }
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userRepository.findByUsername(username)
-            .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+	@Override
+	public UserResponse loginUser(LoginRequest request) {
+		User user = userRepository.findByUsername(request.getUsername())
+				.orElseThrow(() -> new CustomException("Invalid username or password"));
+		if (!passwordUtil.matches(request.getPassword(), user.getPassword())) {
+			throw new CustomException("Invalid username or password");
+		}
+		log.info("User logged in: {}", request.getUsername());
+		return new UserResponse("Login successful");
+	}
 
-        return new org.springframework.security.core.userdetails.User(
-            user.getUsername(),
-            user.getPassword(),  // Password is already encoded
-            Collections.emptyList()  // Add authorities/roles here if you have them
-        );
-    }
-    @Override
-    public UserResponse logoutUser(LogoutRequest request) {
-        log.info("User {} logged out", request.getUsername());
-        // HTTP Basic Auth is stateless; just return success message
-        return new UserResponse("Logout successful");
-    }
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		User user = userRepository.findByUsername(username)
+				.orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
 
-    @Override
-    public UserResponse resetPassword(ResetPasswordRequest request) {
-        User user = userRepository.findByUsername(request.getUsername())
-            .orElseThrow(() -> new CustomException("User not found"));
+		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), // Password
+																												// is
+																												// already
+																												// encoded
+				Collections.emptyList() // Add authorities/roles here if you have them
+		);
+	}
 
-        if (!passwordUtil.matches(request.getOldPassword(), user.getPassword())) {
-            throw new CustomException("Old password is incorrect");
-        }
+	@Override
+	public UserResponse logoutUser(LogoutRequest request) {
+		log.info("User {} logged out", request.getUsername());
+		// HTTP Basic Auth is stateless; just return success message
+		return new UserResponse("Logout successful");
+	}
 
-        user.setPassword(passwordUtil.hashPassword(request.getNewPassword()));
-        userRepository.save(user);
+	@Override
+	public UserResponse resetPassword(ResetPasswordRequest request) {
+		User user = userRepository.findByUsername(request.getUsername())
+				.orElseThrow(() -> new CustomException("User not found"));
 
-        log.info("User {} password reset successful", request.getUsername());
+		if (!passwordUtil.matches(request.getOldPassword(), user.getPassword())) {
+			throw new CustomException("Old password is incorrect");
+		}
 
-        return new UserResponse("Password reset successful");
-    }
+		user.setPassword(passwordUtil.hashPassword(request.getNewPassword()));
+		userRepository.save(user);
 
-    
-    
+		log.info("User {} password reset successful", request.getUsername());
+
+		return new UserResponse("Password reset successful");
+	}
+
 }

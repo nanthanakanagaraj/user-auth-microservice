@@ -1,7 +1,5 @@
 package com.userauthmicroservice.dto;
 
-
-
 public class LogoutRequest {
     private String username;
     public String getUsername() { return username; }

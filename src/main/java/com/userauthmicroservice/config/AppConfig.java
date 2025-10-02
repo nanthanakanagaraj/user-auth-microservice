@@ -13,34 +13,30 @@ import com.userauthmicroservice.service.UserServiceImpl;
 @Configuration
 public class AppConfig {
 
-    //  bean for to BCrypt password encoder
-    @Bean
-    public BCryptPasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-    
-    
 
-    // Security filter chain bean to configure HTTP security
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable())  // Disable CSRF for easier testing
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers(
-                    "/api/register", "/api/login", "/api/logout", "/api/reset", 
-                    "/register.html", "/login.html", "/logout.html", "/reset.html",
-                    "/dashboard.html")
-                .permitAll()  // Allow these endpoints without authentication
-                .anyRequest().authenticated()  // All other endpoints require authentication
-            )
-            .httpBasic();  // Use HTTP Basic auth (can change to JWT or other)
+	//bean for password encoder
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 
-        return http.build();
-    }
 
-    @Bean
-    public UserDetailsService userDetailsService(UserServiceImpl userServiceImpl) {
-        return userServiceImpl;
-    }
+	// Security filter chain bean to configure HTTP security
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http.csrf(csrf -> csrf.disable()) // Disable CSRF for easier testing
+				.authorizeHttpRequests(auth -> auth
+						.requestMatchers("/api/register", "/api/login", "/api/logout", "/api/reset", "/register.html",
+								"/login.html", "/logout.html", "/reset.html", "/dashboard.html")
+						.permitAll() // Allow these endpoints without authentication
+						.anyRequest().authenticated() // All other endpoints require authentication
+				).httpBasic(); // Use HTTP Basic auth (can change to JWT or other)
+
+		return http.build();
+	}
+
+	@Bean
+	public UserDetailsService userDetailsService(UserServiceImpl userServiceImpl) {
+		return userServiceImpl;
+	}
 }
-
