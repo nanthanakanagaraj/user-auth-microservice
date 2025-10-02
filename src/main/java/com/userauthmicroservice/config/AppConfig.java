@@ -13,7 +13,7 @@ import com.userauthmicroservice.service.UserServiceImpl;
 @Configuration
 public class AppConfig {
 
-    // Example bean for password encoder
+    //  bean for to BCrypt password encoder
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
