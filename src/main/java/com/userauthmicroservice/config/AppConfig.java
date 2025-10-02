@@ -8,16 +8,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.userauthmicroservice.service.UserService;
 import com.userauthmicroservice.service.UserServiceImpl;
 
 @Configuration
 public class AppConfig {
+
 
 	//bean for password encoder
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
+
 
 	// Security filter chain bean to configure HTTP security
 	@Bean
@@ -34,7 +37,8 @@ public class AppConfig {
 	}
 
 	@Bean
-	public UserDetailsService userDetailsService(UserServiceImpl userServiceImpl) {
-		return userServiceImpl;
+	public UserDetailsService userDetailsService(UserService userService) {
+	    return (UserDetailsService) userService;
 	}
+
 }
