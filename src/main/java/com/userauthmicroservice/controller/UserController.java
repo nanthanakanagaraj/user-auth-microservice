@@ -2,6 +2,10 @@ package com.userauthmicroservice.controller;
 
 import com.userauthmicroservice.dto.*;
 import com.userauthmicroservice.service.UserService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -9,8 +13,10 @@ import com.userauthmicroservice.dto.LogoutRequest;
 import com.userauthmicroservice.dto.ResetPasswordRequest;
 import org.springframework.web.bind.annotation.*;
 
+@Tag(name = "User Authentication APIs", description = "Endpoints for user operations")
 @RestController
 @RequestMapping("/api")
+
 public class UserController {
 
 	private final UserService userService;
@@ -19,14 +25,15 @@ public class UserController {
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
-
+	@Operation(summary = "Register a new user", description = "Creates a new user account.")
 	@PostMapping("/register")
 	public ResponseEntity<UserResponse> register(@RequestBody RegisterRequest request) {
 		log.info("Register API called");
 		UserResponse response = userService.registerUser(request);
 		return ResponseEntity.ok(response);
 	}
-
+    
+	@Operation(summary = "Login user", description = "Authenticate user and generate token.")
 	@PostMapping("/login")
 	public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request) {
 		log.info("Login API called");
