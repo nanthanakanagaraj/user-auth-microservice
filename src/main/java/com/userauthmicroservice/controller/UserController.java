@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+
 public class UserController {
 
 	private final UserService userService;
@@ -19,14 +20,15 @@ public class UserController {
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
-
+	
 	@PostMapping("/register")
 	public ResponseEntity<UserResponse> register(@RequestBody RegisterRequest request) {
 		log.info("Register API called");
 		UserResponse response = userService.registerUser(request);
 		return ResponseEntity.ok(response);
 	}
-
+    
+	
 	@PostMapping("/login")
 	public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request) {
 		log.info("Login API called");
