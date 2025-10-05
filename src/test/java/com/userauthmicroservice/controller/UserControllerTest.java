@@ -70,7 +70,7 @@ public class UserControllerTest {
 				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().isOk());
 	}
 
-	@Test
+	@Test 
 	@WithMockUser
 	public void testResetPassword() throws Exception {
 		ResetPasswordRequest request = new ResetPasswordRequest();

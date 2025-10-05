@@ -8,10 +8,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+import com.userauthmicroservice.service.UserService;
 import com.userauthmicroservice.service.UserServiceImpl;
 
 @Configuration
 public class AppConfig {
+
 
 	//bean for password encoder
 	@Bean
@@ -19,13 +21,14 @@ public class AppConfig {
 		return new BCryptPasswordEncoder();
 	}
 
+
 	// Security filter chain bean to configure HTTP security
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.csrf(csrf -> csrf.disable()) // Disable CSRF for easier testing
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/api/register", "/api/login", "/api/logout", "/api/reset", "/register.html",
-								"/login.html", "/logout.html", "/reset.html", "/dashboard.html","/swagger-ui/**","/v3/api-docs/**","/swagger-ui.html","/swagger-resources/**","/webjars/**")
+								"/login.html", "/logout.html", "/reset.html")
 						.permitAll() // Allow these endpoints without authentication
 						.anyRequest().authenticated() // All other endpoints require authentication
 				).httpBasic(); // Use HTTP Basic auth (can change to JWT or other)
@@ -34,7 +37,8 @@ public class AppConfig {
 	}
 
 	@Bean
-	public UserDetailsService userDetailsService(UserServiceImpl userServiceImpl) {
-		return userServiceImpl;
+	public UserDetailsService userDetailsService(UserService userService) {
+	    return (UserDetailsService) userService;
 	}
+
 }
