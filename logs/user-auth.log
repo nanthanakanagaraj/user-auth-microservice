@@ -2396,3 +2396,9 @@ org.springframework.web.servlet.resource.NoResourceFoundException: No static res
 2025-10-04T22:02:41.744+05:30 DEBUG 5572 --- [user-auth-microservice] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
 2025-10-04T22:02:42.286+05:30  INFO 5572 --- [user-auth-microservice] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 500 ms
 2025-10-04T22:02:42.322+05:30 DEBUG 5572 --- [user-auth-microservice] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-04T22:41:26.105+05:30  INFO 5572 --- [user-auth-microservice] [RMI TCP Connection(43)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-04T22:41:26.113+05:30  INFO 5572 --- [user-auth-microservice] [RMI TCP Connection(43)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-04T22:41:26.124+05:30  INFO 5572 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-04T22:41:26.138+05:30  INFO 5572 --- [user-auth-microservice] [RMI TCP Connection(43)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-04T22:41:26.145+05:30  INFO 5572 --- [user-auth-microservice] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-04T22:41:26.151+05:30  INFO 5572 --- [user-auth-microservice] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
