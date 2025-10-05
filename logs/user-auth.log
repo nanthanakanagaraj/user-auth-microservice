@@ -10706,3 +10706,9 @@ This generated password is for development use only. Your security configuration
 2025-10-05T19:45:57.052+05:30 DEBUG 2232 --- [user-auth-microservice] [http-nio-8080-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/error?id=2&continue to session
 2025-10-05T19:45:57.053+05:30 DEBUG 2232 --- [user-auth-microservice] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
 2025-10-05T19:45:57.053+05:30 DEBUG 2232 --- [user-auth-microservice] [http-nio-8080-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@2c5a3668
+2025-10-05T20:04:47.100+05:30  INFO 2232 --- [user-auth-microservice] [RMI TCP Connection(55)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-10-05T20:04:47.107+05:30  INFO 2232 --- [user-auth-microservice] [RMI TCP Connection(55)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-05T20:04:47.116+05:30  INFO 2232 --- [user-auth-microservice] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-05T20:04:47.127+05:30  INFO 2232 --- [user-auth-microservice] [RMI TCP Connection(55)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-05T20:04:47.137+05:30  INFO 2232 --- [user-auth-microservice] [RMI TCP Connection(55)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-05T20:04:47.142+05:30  INFO 2232 --- [user-auth-microservice] [RMI TCP Connection(55)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
