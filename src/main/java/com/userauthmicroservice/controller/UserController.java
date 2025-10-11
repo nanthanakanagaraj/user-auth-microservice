@@ -25,6 +25,7 @@ public class UserController {
 		this.userService = userService;
 	}
 	
+	@Operation(summary = "Register a new user", description = "Creates a new user account.")
 	@PostMapping("/register")
 	public ResponseEntity<UserResponse> register(@RequestBody RegisterRequest request) {
 		log.info("Register API called");
@@ -32,7 +33,7 @@ public class UserController {
 		return ResponseEntity.ok(response);
 	}
     
-	
+	@Operation(summary = "Login user", description = "Authenticate user and generate token.")
 	@PostMapping("/login")
 	public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request) {
 		log.info("Login API called");
