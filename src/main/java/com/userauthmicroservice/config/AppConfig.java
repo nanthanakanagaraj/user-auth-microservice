@@ -28,7 +28,9 @@ public class AppConfig {
 		http.csrf(csrf -> csrf.disable()) // Disable CSRF for easier testing
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/api/register", "/api/login", "/api/logout", "/api/reset", "/register.html",
-								"/login.html", "/logout.html", "/reset.html")
+								"/login.html", "/logout.html", "/reset.html","/swagger-ui/**","/v3/api-docs/**","/swagger-ui.html/**",
+								"/swagger-resources/**","/webjars/**"
+				               )
 						.permitAll() // Allow these endpoints without authentication
 						.anyRequest().authenticated() // All other endpoints require authentication
 				).httpBasic(); // Use HTTP Basic auth (can change to JWT or other)
