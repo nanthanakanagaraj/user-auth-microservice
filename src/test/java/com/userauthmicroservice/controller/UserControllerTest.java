@@ -20,7 +20,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 
-
 @WebMvcTest(UserController.class)
 public class UserControllerTest {
 
@@ -70,7 +69,7 @@ public class UserControllerTest {
 				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().isOk());
 	}
 
-	@Test 
+	@Test
 	@WithMockUser
 	public void testResetPassword() throws Exception {
 		ResetPasswordRequest request = new ResetPasswordRequest();
@@ -85,4 +84,45 @@ public class UserControllerTest {
 				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().isOk());
 	}
 
+	@WithMockUser
+	public void testRegister_InvalidRequest() throws Exception {
+		RegisterRequest request = new RegisterRequest(); // No username or password
+
+		mockMvc.perform(post("/api/register").contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().isBadRequest()); // Or
+																														// adjust
+																														// as
+																														// per
+																														// your
+																														// validation
+	}
+
+
+// Logout: service throws error returns 500 Internal Server Error
+	@Test
+	@WithMockUser
+	public void testLogout_Failure() throws Exception {
+		LogoutRequest request = new LogoutRequest();
+		request.setUsername("invaliduser");
+
+		Mockito.when(userService.logoutUser(Mockito.any())).thenThrow(new RuntimeException("Logout failed"));
+
+		mockMvc.perform(post("/api/logout").contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().is5xxServerError());
+	}
+
+// Reset Password: invalid user returns 500 Internal Server Error
+	@Test
+	@WithMockUser
+	public void testResetPassword_Failure() throws Exception {
+		ResetPasswordRequest request = new ResetPasswordRequest();
+		request.setUsername("notexist");
+		request.setOldPassword("oldpass");
+		request.setNewPassword("newpass");
+
+		Mockito.when(userService.resetPassword(Mockito.any())).thenThrow(new RuntimeException("User not found"));
+
+		mockMvc.perform(post("/api/reset").contentType(MediaType.APPLICATION_JSON)
+				.content(objectMapper.writeValueAsString(request)).with(csrf())).andExpect(status().is5xxServerError());
+	}
 }

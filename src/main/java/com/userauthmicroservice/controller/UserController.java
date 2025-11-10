@@ -5,6 +5,7 @@ import com.userauthmicroservice.service.UserService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,17 +25,17 @@ public class UserController {
 	public UserController(UserService userService) {
 		this.userService = userService;
 	}
-	
-	@PostMapping("/register")
-	public ResponseEntity<UserResponse> register(@RequestBody RegisterRequest request) {
+	@Operation(summary = "Register a new user", description = "Creates a new user account.")
+    @PostMapping("/register")
+	public ResponseEntity<UserResponse> register( @RequestBody RegisterRequest request) {
 		log.info("Register API called");
 		UserResponse response = userService.registerUser(request);
 		return ResponseEntity.ok(response);
 	}
     
-	
+	@Operation(summary = "Login user", description = "Authenticate user and generate token.")
 	@PostMapping("/login")
-	public ResponseEntity<UserResponse> login(@RequestBody LoginRequest request) {
+	public ResponseEntity<UserResponse> login( @RequestBody LoginRequest request) {
 		log.info("Login API called");
 		UserResponse response = userService.loginUser(request);
 		return ResponseEntity.ok(response);
